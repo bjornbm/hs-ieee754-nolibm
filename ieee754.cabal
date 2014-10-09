@@ -42,4 +42,4 @@ library
     if flag(big_endian)
         cc-options:  -DBIG_ENDIAN
 
-    extra-libraries: m
+    -- extra-libraries: m
