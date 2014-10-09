@@ -596,7 +596,6 @@ test_nanPayload_F3 =
   where
     maxPayload = maxNaNPayload (undefined :: F)
 
-{-
 test_copySign = testGroup "copySign"
     [ testCase "D1" test_copySign_D1
     , testCase "D2" test_copySign_D2
@@ -637,12 +636,12 @@ test_copySign_F5 =
     copySign 1 (copySign nan 1) @?= (1 :: F)
 test_copySign_F6 =
     copySign 1 (copySign nan (-1)) @?= (-1 :: F)
--}
+
 
 
 test_IEEE = testGroup "IEEE"
     [ test_infinity
-    -- , test_copySign
+    , test_copySign
     , test_succIEEE
     , test_predIEEE
     , test_bisectIEEE

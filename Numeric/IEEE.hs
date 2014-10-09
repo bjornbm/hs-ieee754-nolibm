@@ -36,8 +36,9 @@ class (RealFloat a) => IEEE a where
     -- | The smallest representalbe positive value @x@ such that @1 + x /= 1@.
     epsilon :: a
 
-    -- -- | @copySign x y@ returns @x@ with its sign changed to @y@'s.
-    -- copySign :: a -> a -> a
+    -- | @copySign x y@ returns @x@ with its sign changed to @y@'s.
+    copySign :: a -> a -> a
+    copySign x y = if signum x == signum (significand y) then x else negate x
 
     -- | Return 'True' if two values are /exactly/ (bitwise) equal.
     identicalIEEE :: a -> a -> Bool
