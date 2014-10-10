@@ -1,3 +1,8 @@
+**DEPRECATED:** the dependency on _libm_ was removed from _ieee754_
+version 0.7.4. This library no longer serves a purpose.
+
+ * * *
+
 This library is a fork of Patrick Perry's [_ieee754_][1] library, with
 the dependency on _libm_ removed. It relies instead on unspecified
 behavior.
