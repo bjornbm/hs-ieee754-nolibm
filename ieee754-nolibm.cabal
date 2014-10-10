@@ -6,6 +6,10 @@ description:
     Utilities for dealing with IEEE floating point numbers, ported
     from the Tango math library; approximate and exact equality
     comparisons for general types.
+
+    This is a fork of Patrick Perry's _ieee754_ library, with the
+    dependency on _libm_ removed. It relies instead on unspecified behavior
+    for NaNs.
 category:        Math
 license:         BSD3
 license-file:    LICENSE

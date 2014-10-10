@@ -37,6 +37,9 @@ class (RealFloat a) => IEEE a where
     epsilon :: a
 
     -- | @copySign x y@ returns @x@ with its sign changed to @y@'s.
+      --
+      -- Note: In the default implementation this relies on unspecified
+      -- behaviour for NaNs.
     copySign :: a -> a -> a
     copySign x y = if signum x == signum' y then x else negate x
       where
