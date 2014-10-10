@@ -2,7 +2,7 @@ This library is a fork of Patrick Perry's [_ieee754_][1] library, with
 the dependency on _libm_ removed. It relies instead on unspecified
 behavior.
 
-Problem with depending on libm are discussed in [GHC issue 3242][2].
+Problems with depending on libm are discussed in [GHC issue 3242][2].
 
 
 The only functions from libm used in ieee754 are `copysign` and
