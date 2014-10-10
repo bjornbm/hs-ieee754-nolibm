@@ -5,10 +5,10 @@ Problem with depending on libm are discussed in [GHC issue 3242][2].
 
 
 The only functions from libm used in ieee754 are `copysign` and
-`copysignf`.  To avoid the libm dependency alltogether in _ieee-754-nolibm_
+`copysignf`.  To avoid the libm dependency altogether in _ieee-754-nolibm_
 these functions have been replaced with a pure Haskell implementation, The pure
-Haskell implementation is no doubt much slower than libm, and probabaly not
-correct in all cases (involvning _NaN_) on all architectures.
+Haskell implementation is no doubt much slower than libm, and probably not
+correct in all cases (involving _NaN_) on all architectures.
 
 That being said all tests from ieee754 pass on:
 
