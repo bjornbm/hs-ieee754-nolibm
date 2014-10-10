@@ -38,7 +38,9 @@ class (RealFloat a) => IEEE a where
 
     -- | @copySign x y@ returns @x@ with its sign changed to @y@'s.
     copySign :: a -> a -> a
-    copySign x y = if signum x == signum (significand y) then x else negate x
+    copySign x y = if signum x == signum' y then x else negate x
+      where
+        signum' y = signum (if isNaN y then significand y else y)
     {-# INLINE copySign #-}
 
     -- | Return 'True' if two values are /exactly/ (bitwise) equal.
