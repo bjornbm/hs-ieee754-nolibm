@@ -1,13 +1,13 @@
 This library is a fork of Patrick Perry's [_ieee754_][1] library, with the
 dependency on _libm_ removed. It relies instead on unspecified behavior.
 
-Problem with depending on _libm_ are discussed in [GHC issue 3242][2].
+Problem with depending on libm are discussed in [GHC issue 3242][2].
 
 
-The only functions from _libm_ used in _ieee754_ are `copysign` and
-`copysignf`.  To avoid the _libm_ dependency alltogether in _ieee-754-nolibm_
+The only functions from libm used in ieee754 are `copysign` and
+`copysignf`.  To avoid the libm dependency alltogether in _ieee-754-nolibm_
 these functions have been replaced with a pure Haskell implementation, The pure
-Haskell implementation is no doubt much slower than _libm_, and probabaly not
+Haskell implementation is no doubt much slower than libm, and probabaly not
 correct in all cases (involvning _NaN_) on all architectures.
 
 That being said all tests from ieee754 pass on:
@@ -21,7 +21,7 @@ the sign of `y` when `isNaN y`.  However, per the [Prelude docs][3] the behaviou
 particular to the specific test cases and/or the combination of compiler and
 architecture.
 
-All functions other than `copySign` are unchanged from _ieee754_.
+All functions other than `copySign` are unchanged from ieee754.
 
 [1]: https://hackage.haskell.org/package/ieee754
 [2]: https://ghc.haskell.org/trac/ghc/ticket/3242
