@@ -18,10 +18,10 @@ That being said all tests from ieee754 pass on:
 * GHC 7.8.3 32 bit on Windows Server 2008 RC2.
 
 To pass the `copySign` D5 and F5 tests the `significand` is used to
-determine the sign of `y` when `isNaN y`. However, per the [Prelude
-docs][3] the behavior of `significand` is unspecified on _NaN_ values,
-so the apparent success may be particular to the specific test cases
-and/or the combination of compiler and architecture.
+determine the sign of _NaN_ values. However, per the [Prelude docs][3]
+the behavior of `significand` is unspecified on _NaN_ values, so the
+apparent success may be particular to the specific test cases and/or the
+combination of compiler and architecture.
 
 All functions other than `copySign` are unchanged from ieee754.
 
